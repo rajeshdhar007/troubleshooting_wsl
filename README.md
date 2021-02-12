@@ -73,7 +73,7 @@ users:
   user:
 	client-certificate: /mnt/c/Users/[YOUR-USER]/.minikube/client.crt
 	client-key: /mnt/c/Users/[YOUR-USER]/.minikube/client.key
-```	
+```
 Also, there is one last thing you need to do. You need to add this line to your .bashrc file:
 ```
 export DOCKER_CERT_PATH=/mnt/c/Users/[YOUR-USER]/.minikube/certs
