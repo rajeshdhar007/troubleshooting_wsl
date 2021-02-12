@@ -32,48 +32,50 @@ Here it comes the catch now. We need to change a couple of things in the config 
 Let’s say that this is your config below. You will need to change the certificate-authority , client-certificate and the client-key so the WSL can find it.
 ```
 apiVersion: v1
-		clusters:
-		- cluster:
+clusters:
+- cluster:
 		certificate-authority: C:\Users\[YOUR-USER]\.minikube\ca.crt
 		server: https://172.17.29.90:8443
-		name: minikube
-		contexts:
-		- context:
-		cluster: minikube
-		user: minikube
-		name: minikube
-		current-context: minikube
-		kind: Config
-		preferences: {}
-		users:
-		- name: minikube
-		user:
-		client-certificate: C:\Users\[YOUR-USER]\.minikube\client.crt
-		client-key: C:\Users\[YOUR-USER]\.minikube\client.key
+  name: minikube
+contexts:
+- context:
+	cluster: minikube
+	user: minikube
+  name: minikube
+current-context: minikube
+kind: Config
+preferences: {}
+users:
+- name: minikube
+  user:
+	client-certificate: C:\Users\[YOUR-USER]\.minikube\client.crt
+	client-key: C:\Users\[YOUR-USER]\.minikube\client.key
 ```
 New version of the config file in the WSL box:
 ```
 apiVersion: v1
-		clusters:
-		- cluster:
-		certificate-authority: /mnt/c/Users/[YOUR-USER]/.minikube/ca.crt
-		server: https://172.17.29.90:8443
-		name: minikube
-		contexts:
-		- context:
-		cluster: minikube
-		user: minikube
-		name: minikube
-		current-context: minikube
-		kind: Config
-		preferences: {}
-		users:
-		- name: minikube
-		user:
-		client-certificate: /mnt/c/Users/[YOUR-USER]/.minikube/client.crt
-		client-key: /mnt/c/Users/[YOUR-USER]/.minikube/client.key
+clusters:
+- cluster:
+	certificate-authority: /mnt/c/Users/[YOUR-USER]/.minikube/ca.crt
+	server: https://172.17.29.90:8443
+  name: minikube
+contexts:
+- context:
+	cluster: minikube
+	user: minikube
+  name: minikube
+current-context: minikube
+kind: Config
+preferences: {}
+users:
+- name: minikube
+  user:
+	client-certificate: /mnt/c/Users/[YOUR-USER]/.minikube/client.crt
+	client-key: /mnt/c/Users/[YOUR-USER]/.minikube/client.key
 ```	
 Also, there is one last thing you need to do. You need to add this line to your .bashrc file:
+```
 export DOCKER_CERT_PATH=/mnt/c/Users/[YOUR-USER]/.minikube/certs
+```
 And then, to finish it off: source ~/.bashrc
 And that is it. Feel free to run kubectl get all to test it. Or any other kubectl command.
