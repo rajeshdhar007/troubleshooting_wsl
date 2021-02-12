@@ -35,8 +35,8 @@ Let’s say that this is your config below. You will need to change the certifi
 apiVersion: v1
 clusters:
 - cluster:
-		certificate-authority: C:\Users\[YOUR-USER]\.minikube\ca.crt
-		server: https://172.17.29.90:8443
+	certificate-authority: C:\Users\[YOUR-USER]\.minikube\ca.crt
+	server: https://172.17.29.90:8443
   name: minikube
 contexts:
 - context:
