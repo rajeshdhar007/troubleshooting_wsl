@@ -8,8 +8,7 @@ Run the following commands in powershell (admin mode)
 ```
 
 # Using MINIKUBE on Windows with KUBECTL on WSL2
-### Ref:
-### https://medium.com/@joaoh82/setting-up-kubernetes-on-wsl-to-work-with-minikube-on-windows-10-90dac3c72fa1
+### Ref: https://medium.com/@joaoh82/setting-up-kubernetes-on-wsl-to-work-with-minikube-on-windows-10-90dac3c72fa1
 This is another post on setting up your development environment to work with WSL (Windows Subsystem for Linux) and Window 10 Pro.
 Last time was about setting up Docker to on your WSL box to work with your Docker Engine on your Windows, so you could work transparently between the environments. Here is the link, in case you want to check it out.
 https://medium.com/@joaoh82/setting-up-docker-toolbox-for-windows-home-10-and-wsl-to-work-perfectly-2fd34ed41d51
