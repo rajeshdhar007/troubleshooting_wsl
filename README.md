@@ -78,5 +78,5 @@ Also, there is one last thing you need to do. You need to add this line to your�
 ```
 export DOCKER_CERT_PATH=/mnt/c/Users/[YOUR-USER]/.minikube/certs
 ```
-And then, to finish it off: source ~/.bashrc
-And that is it. Feel free to run kubectl get all to test it. Or any other kubectl command.
+And then, to finish it off: ``` source ~/.bashrc ```
+And that is it. Feel free to run ``` kubectl get all``` to test it. Or any other kubectl command.
