@@ -7,4 +7,4 @@ Run the following commands in powershell (admin mode)
 > Get-NetAdapter | Where-Object {$_.InterfaceDescription -Match "Cisco AnyConnect"} | Set-NetIPInterface -InterfaceMetric 6000
 ```
 
-# Using MINIKUBE on Windows with KUBECTL on WSL2
+## Using MINIKUBE on Windows with KUBECTL on WSL2
